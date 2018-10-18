@@ -1,0 +1,38 @@
+{
+  "name": "fastpanel",
+  "version": "0.0.1",
+  "description": "A open source data management system.",
+  "author": "Desionlab <fenixphp@gmail.com>",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run develop",
+    "develop": "nodemon"
+  },
+  "_moduleAliases": {
+    "@App": "./App"
+  },
+  "_moduleDirectories": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/desionlab/fastpanel.git"
+  },
+  "bugs": {
+    "url": "https://github.com/desionlab/fastpanel/issues"
+  },
+  "homepage": "https://github.com/desionlab/fastpanel#readme",
+  "keywords": [
+    "nodejs",
+    "mongoose",
+    "express",
+    "rest-api",
+    "clustering",
+    "socket-io"
+  ],
+  "dependencies": {
+    "fastpanel-core": "file:../fastpanel-core",
+    "module-alias": "^2.1.0"
+  },
+  "devDependencies": {},
+  "license": "MIT"
+}

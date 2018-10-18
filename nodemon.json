@@ -1,0 +1,13 @@
+{
+  "ignore": [
+    ".git",
+    "node_modules/**/node_modules",
+    "public/",
+    "temp/"
+  ],
+  "env": {
+    "NODE_ENV": "develop",
+    "HOST": "0.0.0.0",
+    "PORT": 3000
+  }
+}
