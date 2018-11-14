@@ -8,6 +8,7 @@
   "env": {
     "NODE_ENV": "develop",
     "HOST": "0.0.0.0",
-    "PORT": 3000
+    "PORT": 3000,
+    "CONFIG_PATH": "App/Config"
   }
 }

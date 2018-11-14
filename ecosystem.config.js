@@ -21,17 +21,20 @@ module.exports = {
       env : {
         NODE_ENV      : 'develop',
         HOST          : '0.0.0.0',
-        PORT          : 3000
+        PORT          : 3000,
+        CONFIG_PATH   : 'App/Config'
       },
       env_staging : {
         NODE_ENV     : 'staging',
         HOST          : '0.0.0.0',
-        PORT          : 3000
+        PORT          : 3000,
+        CONFIG_PATH   : 'App/Config'
       },
       env_production : {
         NODE_ENV      : 'production',
         HOST          : '0.0.0.0',
-        PORT          : 80
+        PORT          : 80,
+        CONFIG_PATH   : 'App/Config'
       },
       pmx         : false,
       exec_mode   : 'cluster',

@@ -25,12 +25,12 @@ handler
 /* Startup success. */
 .then(function () {
   /* Startup success message. */
-  console.info('[√][' + (new Date()).toISOString() + ']' + '[' + process.ppid + '][' + process.pid + '] Startup success.');
+  handler.cli.log('Cli handler startup success.');
 })
 /* Startup error. */
 .catch(function (error) {
   /* Startup error message. */
-  console.error('[×][' + (new Date()).toISOString() + ']' + '[' + process.ppid + '][' + process.pid + '] Startup error.', error);
+  console.error('Cli handler startup error:', error);
 });
 
 /* End of file cli.js */
