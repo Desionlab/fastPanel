@@ -15,12 +15,12 @@ const { Cluster } = require('fastpanel-core');
 /* Create DI container instant. */
 const container = new Cluster.FactoryDefault();
 
-/* Create worker instant. */
-const worker = new Cluster.Worker(container);
+/* Create handler instant. */
+const handler = new Cluster.Handler(container);
 
 /* Ready to start. */
-worker
-/* Init worker process. */
+handler
+/* Init handler process. */
 .init()
 /* Startup success. */
 .then(function () {
