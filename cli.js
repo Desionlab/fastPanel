@@ -18,6 +18,9 @@ const container = new Cli.FactoryDefault();
 /* Create handler instant. */
 const handler = new Cli.Handler(container);
 
+/* Register app as extension. */
+handler.addExtension(require('@App/'));
+
 /* Ready to start. */
 handler
 /* Init handler process. */

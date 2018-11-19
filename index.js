@@ -2,7 +2,7 @@
  * index.js
  * 
  * @author    Desionlab <fenixphp@gmail.com>
- * @copyright 2018 Desionlab
+ * @copyright 2014 - 2018 Desionlab
  * @license   MIT
  */
 
@@ -17,6 +17,9 @@ const container = new Cluster.FactoryDefault();
 
 /* Create handler instant. */
 const handler = new Cluster.Handler(container);
+
+/* Register app as extension. */
+handler.addExtension(require('@App/'));
 
 /* Ready to start. */
 handler
