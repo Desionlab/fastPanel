@@ -8,9 +8,6 @@
 
 const { Extensions } = require('fastpanel-core');
 
-/**
- * 
- */
 module.exports = class extends Extensions.ExtensionDefines {
 
   /**

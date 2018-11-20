@@ -18,6 +18,18 @@ const container = new Cluster.FactoryDefault();
 /* Create handler instant. */
 const handler = new Cluster.Handler(container);
 
+/* Register Redis extension. */
+handler.addExtension(require('fastpanel-extension-redis'));
+
+/* Register MongoDB extension. */
+handler.addExtension(require('fastpanel-extension-mongodb'));
+
+/* Register HTTP extension. */
+handler.addExtension(require('fastpanel-extension-httpx'));
+
+/* Register Socket.io extension. */
+handler.addExtension(require('fastpanel-extension-socket.io'));
+
 /* Register app as extension. */
 handler.addExtension(require('@App/'));
 
@@ -27,6 +39,7 @@ handler
 .init()
 /* Startup success. */
 .then(function () {
+  console.log(handler);
   /* Startup success message. */
   console.info('[√][' + (new Date()).toISOString() + ']' + '[' + process.ppid + '][' + process.pid + '] Startup success.');
 })

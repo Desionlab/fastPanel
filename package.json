@@ -31,6 +31,10 @@
   ],
   "dependencies": {
     "fastpanel-core": "file:../fastpanel-core",
+    "fastpanel-extension-httpx": "file:../fastpanel-extension-httpx",
+    "fastpanel-extension-mongodb": "file:../fastpanel-extension-mongodb",
+    "fastpanel-extension-redis": "file:../fastpanel-extension-redis",
+    "fastpanel-extension-socket.io": "file:../fastpanel-extension-socket.io",
     "module-alias": "^2.1.0"
   },
   "devDependencies": {},
