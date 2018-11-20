@@ -39,7 +39,6 @@ handler
 .init()
 /* Startup success. */
 .then(function () {
-  console.log(handler);
   /* Startup success message. */
   console.info('[√][' + (new Date()).toISOString() + ']' + '[' + process.ppid + '][' + process.pid + '] Startup success.');
 })

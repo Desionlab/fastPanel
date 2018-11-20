@@ -13,16 +13,12 @@ module.exports = class extends Extensions.ExtensionDefines {
   /**
    * Registers a service provider.
    */
-  register (di) {
-
-  }
+  register () {}
   
   /**
    * Startup a service provider.
    */
-  startup (di) {
-
-  }
+  startup () {}
 
 }
 
