@@ -10,7 +10,7 @@
 require('module-alias/register');
 
 /* Get core components. */
-const { Cluster } = require('fastpanel-core');
+const { Cluster, Cli } = require('fastpanel-core');
 
 /* Create DI container instant. */
 const container = new Cluster.FactoryDefault();
@@ -39,6 +39,7 @@ handler
 .init()
 /* Startup success. */
 .then(function () {
+  console.log(handler);
   /* Startup success message. */
   console.info('[√][' + (new Date()).toISOString() + ']' + '[' + process.ppid + '][' + process.pid + '] Startup success.');
 })

@@ -8,18 +8,27 @@
 
 const { Extensions } = require('fastpanel-core');
 
-module.exports = class extends Extensions.ExtensionDefines {
+/**
+ * Class Extension
+ * 
+ * Initialization of the extension.
+ * 
+ * @version 1.0.0
+ */
+class Extension extends Extensions.ExtensionDefines {
 
   /**
    * Registers a service provider.
    */
-  register () {}
+  async register () {}
   
   /**
    * Startup a service provider.
    */
-  startup () {}
+  async startup () {}
 
 }
+
+module.exports.Extension = Extension;
 
 /* End of file index.js */
