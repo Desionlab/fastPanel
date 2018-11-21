@@ -9,6 +9,7 @@
     "NODE_ENV": "develop",
     "HOST": "0.0.0.0",
     "PORT": 3000,
-    "CONFIG_PATH": "App/Config"
+    "CONFIG_PATH": "App/Config",
+    "LOGGER_PATH": "App/Logs"
   }
 }

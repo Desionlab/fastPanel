@@ -22,19 +22,22 @@ module.exports = {
         NODE_ENV      : 'develop',
         HOST          : '0.0.0.0',
         PORT          : 3000,
-        CONFIG_PATH   : 'App/Config'
+        CONFIG_PATH   : 'App/Config',
+        LOGGER_PATH   : 'App/Logs'
       },
       env_staging : {
         NODE_ENV     : 'staging',
         HOST          : '0.0.0.0',
         PORT          : 3000,
-        CONFIG_PATH   : 'App/Config'
+        CONFIG_PATH   : 'App/Config',
+        LOGGER_PATH   : 'App/Logs'
       },
       env_production : {
         NODE_ENV      : 'production',
         HOST          : '0.0.0.0',
         PORT          : 80,
-        CONFIG_PATH   : 'App/Config'
+        CONFIG_PATH   : 'App/Config',
+        LOGGER_PATH   : 'App/Logs'
       },
       pmx         : false,
       exec_mode   : 'cluster',
