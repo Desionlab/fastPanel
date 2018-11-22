@@ -18,14 +18,8 @@ const container = new Cli.FactoryDefault();
 /* Create handler instant. */
 const handler = new Cli.Handler(container);
 
-/* Register Redis extension. */
-handler.addExtension(require('fastpanel-extension-redis'));
-
 /* Register MongoDB extension. */
 handler.addExtension(require('fastpanel-extension-mongodb'));
-
-/* Register HTTP extension. */
-handler.addExtension(require('fastpanel-extension-httpx'));
 
 /* Register Socket.io extension. */
 handler.addExtension(require('fastpanel-extension-socket.io'));
