@@ -37,6 +37,10 @@ class Extension extends Extensions.ExtensionDefines {
       console.log('web:getRoutes');
     });
     
+    this.events.once('socket:getMiddleware', (socket) => {
+      console.log('socket:getMiddleware');
+    });
+
     this.events.once('socket:getActions', (socket) => {
       console.log('socket:getActions');
     });
