@@ -21,29 +21,12 @@ class Extension extends Extensions.ExtensionDefines {
    * Registers a service provider.
    */
   async register () {
-    this.events.once('cli:getCommands', (cli) => {
-      console.log('cli:getCommands');
-    });
-    
-    this.events.once('db:getModels', (db) => {
-      console.log('db:getModels');
-    });
-    
-    this.events.once('web:getMiddleware', (web) => {
-      console.log('web:getMiddleware');
-    });
-    
-    this.events.once('web:getRoutes', (web) => {
-      console.log('web:getRoutes');
-    });
-    
-    this.events.once('socket:getMiddleware', (socket) => {
-      console.log('socket:getMiddleware');
-    });
-
-    this.events.once('socket:getActions', (socket) => {
-      console.log('socket:getActions');
-    });
+    this.events.once('cli:getCommands', (cli) => {});
+    this.events.once('db:getModels', (db) => {});
+    this.events.once('web:getMiddleware', (web) => {});
+    this.events.once('web:getRoutes', (web) => {});
+    this.events.once('socket:getMiddleware', (socket) => {});
+    this.events.once('socket:getActions', (socket) => {});
   }
   
   /**
