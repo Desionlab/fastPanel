@@ -27,6 +27,9 @@ handler.addExtension(require('fastpanel-extension-httpx'));
 /* Register Socket.io extension. */
 handler.addExtension(require('fastpanel-extension-socket.io'));
 
+/* Register Account extension. */
+handler.addExtension(require('fastpanel-extension-account'));
+
 /* Register app as extension. */
 handler.addExtension(require('@App/'));
 
