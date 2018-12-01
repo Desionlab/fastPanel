@@ -1,0 +1,6 @@
+{
+  "fastpanel-extension-mongodb": {},
+  "fastpanel-extension-httpx": {},
+  "fastpanel-extension-socket.io": {},
+  "fastpanel-extension-account": {}
+}

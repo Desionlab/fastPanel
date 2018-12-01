@@ -1,0 +1,11 @@
+{
+  "host": "localhost",
+  "port": 27017,
+  "user": "",
+  "pass": "",
+  "dbName": "fastPanel",
+  "autoReconnect": true,
+  "reconnectTries": 9999,
+  "reconnectInterval": 500,
+  "poolSize": 10
+}

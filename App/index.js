@@ -21,6 +21,7 @@ class Extension extends Extensions.ExtensionDefines {
    * Registers a service provider.
    */
   async register () {
+    this.events.once('app:setup', (app) => {});
     this.events.once('cli:getCommands', (cli) => {});
     this.events.once('db:getModels', (db) => {});
     this.events.once('web:getMiddleware', (web) => {});

@@ -6,11 +6,14 @@
  * @license   MIT
  */
 
+/* Get node modules. */
+const fs = require('fs');
+
 /* Registered alias. */
 require('module-alias/register');
 
 /* Get core components. */
-const { Cluster } = require('fastpanel-core');
+const { Cluster, BOOT_FILE } = require('fastpanel-core');
 
 /* Create DI container instant. */
 const container = new Cluster.FactoryDefault();
@@ -18,17 +21,20 @@ const container = new Cluster.FactoryDefault();
 /* Create handler instant. */
 const handler = new Cluster.Handler(container);
 
-/* Register MongoDB extension. */
-handler.addExtension(require('fastpanel-extension-mongodb'));
-
-/* Register HTTP extension. */
-handler.addExtension(require('fastpanel-extension-httpx'));
-
-/* Register Socket.io extension. */
-handler.addExtension(require('fastpanel-extension-socket.io'));
-
-/* Register Account extension. */
-handler.addExtension(require('fastpanel-extension-account'));
+/* Load extensions. */
+if (fs.existsSync(BOOT_FILE)) {
+  let boot = JSON.parse(fs.readFileSync(BOOT_FILE));
+  for (const key in boot) {
+    if (boot.hasOwnProperty(key)) {
+      const extension = boot[key];
+      try {
+        handler.addExtension(require(key));
+      } catch (error) {
+        console.error(error);
+      }
+    }
+  }
+}
 
 /* Register app as extension. */
 handler.addExtension(require('@App/'));

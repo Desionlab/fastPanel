@@ -22,6 +22,7 @@ module.exports = {
         NODE_ENV      : 'develop',
         HOST          : '0.0.0.0',
         PORT          : 3000,
+        APP_PATH      : 'App',
         CONFIG_PATH   : 'App/Config',
         LOGGER_PATH   : 'App/Logs'
       },
@@ -29,6 +30,7 @@ module.exports = {
         NODE_ENV     : 'staging',
         HOST          : '0.0.0.0',
         PORT          : 3000,
+        APP_PATH      : 'App',
         CONFIG_PATH   : 'App/Config',
         LOGGER_PATH   : 'App/Logs'
       },
@@ -36,6 +38,7 @@ module.exports = {
         NODE_ENV      : 'production',
         HOST          : '0.0.0.0',
         PORT          : 80,
+        APP_PATH      : 'App',
         CONFIG_PATH   : 'App/Config',
         LOGGER_PATH   : 'App/Logs'
       },
