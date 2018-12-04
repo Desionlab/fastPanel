@@ -23,9 +23,13 @@ class Extension extends Extensions.ExtensionDefines {
   async register () {
     this.events.once('app:setup', (app) => {});
     this.events.once('cli:getCommands', (cli) => {});
+    /* --------------------------------------------------------------------- */
     this.events.once('db:getModels', (db) => {});
+    this.events.on('db:getSeedsTasks', (db, list) => {});
+    /* --------------------------------------------------------------------- */
     this.events.once('web:getMiddleware', (web) => {});
     this.events.once('web:getRoutes', (web) => {});
+    /* --------------------------------------------------------------------- */
     this.events.once('socket:getMiddleware', (socket) => {});
     this.events.once('socket:getActions', (socket) => {});
   }
