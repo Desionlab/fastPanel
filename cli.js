@@ -13,7 +13,7 @@ const fs = require('fs');
 require('module-alias/register');
 
 /* Get core components. */
-const { Cli, BOOT_FILE } = require('fastpanel-core');
+const { Cli, BOOT_FILE } = require('@fastpanel/core');
 
 /* Create DI container instant. */
 const container = new Cli.FactoryDefault();

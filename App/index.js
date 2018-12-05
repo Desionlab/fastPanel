@@ -6,7 +6,7 @@
  * @license   MIT
  */
 
-const { Extensions } = require('fastpanel-core');
+const { Extensions } = require('@fastpanel/core');
 
 /**
  * Class Extension
@@ -21,17 +21,27 @@ class Extension extends Extensions.ExtensionDefines {
    * Registers a service provider.
    */
   async register () {
-    this.events.once('app:setup', (app) => {});
-    this.events.once('cli:getCommands', (cli) => {});
+    this.events.on('app:getSetupTasks', async (list) => {});
+    
+    this.events.once('cli:getCommands', async (cli) => {});
+
     /* --------------------------------------------------------------------- */
-    this.events.once('db:getModels', (db) => {});
-    this.events.on('db:getSeedsTasks', (db, list) => {});
+
+    this.events.once('db:getModels', async (db) => {});
+
+    this.events.on('db:getSeedsTasks', async (db, list) => {});
+
     /* --------------------------------------------------------------------- */
-    this.events.once('web:getMiddleware', (web) => {});
-    this.events.once('web:getRoutes', (web) => {});
+
+    this.events.once('web:getMiddleware', async (web) => {});
+
+    this.events.once('web:getRoutes', async (web) => {});
+
     /* --------------------------------------------------------------------- */
-    this.events.once('socket:getMiddleware', (socket) => {});
-    this.events.once('socket:getActions', (socket) => {});
+
+    this.events.once('socket:getMiddleware', async (socket) => {});
+
+    this.events.once('socket:getActions', async (socket) => {});
   }
   
   /**
