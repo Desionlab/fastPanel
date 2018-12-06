@@ -31,11 +31,11 @@
     "socket-io"
   ],
   "dependencies": {
+    "@fastpanel/account": "github:desionlab/fastpanel-extension-account#develop",
     "@fastpanel/core": "github:desionlab/fastpanel-core#develop",
-    "fastpanel-extension-account": "github:desionlab/fastpanel-extension-account#develop",
-    "fastpanel-extension-httpx": "github:desionlab/fastpanel-extension-httpx#develop",
-    "fastpanel-extension-mongodb": "github:desionlab/fastpanel-extension-mongodb#develop",
-    "fastpanel-extension-socket.io": "github:desionlab/fastpanel-extension-socket.io#develop",
+    "@fastpanel/http": "github:desionlab/fastpanel-extension-httpx#develop",
+    "@fastpanel/mongodb": "github:desionlab/fastpanel-extension-mongodb#develop",
+    "@fastpanel/socket.io": "github:desionlab/fastpanel-extension-socket.io#develop",
     "module-alias": "^2.1.0"
   },
   "devDependencies": {},
