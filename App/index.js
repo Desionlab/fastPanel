@@ -22,7 +22,7 @@ class Extension extends Extensions.ExtensionDefines {
    */
   async register () {
     
-    this.events.on('app:watchdog', async (app) => {});
+    this.events.on('app:watchdog', (app) => {});
 
     /* --------------------------------------------------------------------- */
 
