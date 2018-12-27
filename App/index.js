@@ -29,7 +29,7 @@ class Extension extends Extensions.ExtensionDefines {
 
     /* --------------------------------------------------------------------- */
 
-    this.events.on('db:getSeedsTasks', async (db, list) => {});
+    this.events.on('db:getSeedsTasks', async (list) => {});
 
     this.events.once('db:getModels', async (db) => {});
 
