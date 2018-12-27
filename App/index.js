@@ -21,17 +21,20 @@ class Extension extends Extensions.ExtensionDefines {
    * Registers a service provider.
    */
   async register () {
-    this.events.on('app:watchdog', async (app) => {});
-
-    this.events.on('app:getSetupTasks', async (list) => {});
     
-    this.events.once('cli:getCommands', async (cli) => {});
+    this.events.on('app:watchdog', async (app) => {});
 
     /* --------------------------------------------------------------------- */
 
-    this.events.on('db:getSeedsTasks', async (list) => {});
+    this.events.once('cli:getCommands', async (cli) => {});
+
+    this.events.on('app:getSetupSubscriptions', (list) => {});
+    
+    /* --------------------------------------------------------------------- */
 
     this.events.once('db:getModels', async (db) => {});
+
+    this.events.on('db:getSeedsSubscriptions', (list) => {});
 
     /* --------------------------------------------------------------------- */
 
