@@ -30,7 +30,7 @@ if (fs.existsSync(BOOT_FILE)) {
       try {
         handler.addExtension(require(key));
       } catch (error) {
-        console.error(error);
+        handler.logger.error(error);
       }
     }
   }
