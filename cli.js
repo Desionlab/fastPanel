@@ -46,7 +46,7 @@ handler
 /* Startup success. */
 .then(function () {
   /* Startup success message. */
-  handler.cli.log('Cli handler startup success.');
+  handler.logger.info('Cli handler startup success.');
 })
 /* Startup error. */
 .catch(function (error) {
